@@ -41,15 +41,17 @@ class Sender:
             self.process_file(os.path.join(folder, f))
 
 # %%
-parser = argparse.ArgumentParser()
-parser.add_argument('--container', type=str)
-parser.add_argument('--container_path', default='f1/results', type=str)
-parser.add_argument('--folder', default='data', type=str)
-args = parser.parse_args()
+if __name__ == 'main':
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--container', type=str)
+    parser.add_argument('--container_path', default='f1/results', type=str)
+    parser.add_argument('--folder', default='data', type=str)
+    args = parser.parse_args()
 
-if args.container:
-    send = Sender('f1-lake', 'f1-lake/results')
-    send.process_folder(args.folder)
+    if args.container:
+        send = Sender('f1-lake', 'f1-lake/results')
+        send.process_folder(args.folder)
 
-else:
-    print('Sem container definido')
+    else:
+        print('Sem container definido')
