@@ -7,8 +7,8 @@ from collect import CollectResults
 from sender import Sender
 
 dotenv.load_dotenv()
-AZ_CONT_NAM = os.getenv('AZURE_CONTAINER_NAME')
-AZ_CONT_FDR = os.getenv('AZURE_CONTAINER_FOLDER')
+WORKSPACE_ID = os.getenv('WORKSPACE_ID')
+LAKEHOUSE_ID  = os.getenv('LAKEHOUSE_ID')
 
 while True:
 
@@ -19,7 +19,7 @@ while True:
     collect_data.process_years()
 
     print('Enviando dados ...')
-    sender_data = Sender(container_name=AZ_CONT_NAM, container_folder=AZ_CONT_FDR)
+    sender_data = Sender(workspace_id=WORKSPACE_ID, lakehouse_id=LAKEHOUSE_ID)
     sender_data.process_folder('data/')
 
     print('Iteração finalizada.')
