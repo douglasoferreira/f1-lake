@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "MLExperiment",
+    "displayName": "ex_f1_driver_champion",
+    "description": ""
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4f4ce1dc-b760-8e8a-4fb0-a55c64cac062"
+  }
+}
