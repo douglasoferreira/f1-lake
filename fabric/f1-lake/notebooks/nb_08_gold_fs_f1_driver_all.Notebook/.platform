@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "nb_08_gold_fs_f1_driver_all"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2113cf2d-0544-9b46-4a90-59287294a9c6"
+  }
+}

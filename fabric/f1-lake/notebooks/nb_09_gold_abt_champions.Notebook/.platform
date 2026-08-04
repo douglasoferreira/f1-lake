@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "nb_09_gold_abt_champions"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "cbca5b4b-dcb4-9073-485d-2a5152fc9358"
+  }
+}

@@ -1,0 +1,11 @@
+azure_storage==0.37.0
+fastf1==3.8.3
+matplotlib==3.11.1
+mlflow==3.14.0
+mlflow_skinny==3.14.0
+mlflow_tracing==3.14.0
+pandas==3.0.3
+pyspark==4.2.0
+python-dotenv==1.2.2
+scikit_learn==1.9.0
+tqdm==4.68.2
