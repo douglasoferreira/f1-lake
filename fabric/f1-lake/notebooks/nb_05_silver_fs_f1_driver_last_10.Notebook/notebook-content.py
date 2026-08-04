@@ -34,13 +34,13 @@ SELECT DISTINCT CAST(Date AS DATE) AS DateRef
   FROM lh_f1_lake_silver.dbo.f1_results
 ),
 
---2. Cross-reference: For every reference date, find all sessions that happened on or before it
+--2. Cross-reference: For every reference date, find all sessions that happened before it
 past_sessions AS(
 SELECT A.DateRef
      , A.YearRef
      , B.*
   FROM tb_dates   A
-  JOIN lh_f1_lake_silver.dbo.f1_results B ON B.Date <= A.DateRef
+  JOIN lh_f1_lake_silver.dbo.f1_results B ON B.Date < A.DateRef
 ),
 
 -- 3. Filter for eligible drivers (active in the reference year or (reference year - 2))
