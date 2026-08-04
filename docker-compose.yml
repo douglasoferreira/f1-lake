@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  fabric-app:
+    build: .
+    container_name: fabric_f1_lake
+    # O volume sincroniza os arquivos da sua máquina local (WSL) com o container em tempo real.
+    # Se você alterar o código no VS Code, ele altera dentro do container instantaneamente.
+    volumes:
+      - .:/app
+    ports:
+      - "8888:8888" # Porta para acessar o Jupyter localmente
+      - "4040:4040" # Porta para monitorar jobs do Spark (Spark UI)
+    environment:
+      - SPARK_LOCAL_IP=127.0.0.1
+    # COMANDO DE INICIALIZAÇÃO: 
+    # Por padrão, ele vai subir o servidor Jupyter para você testar seus códigos e rodar Spark.
+    command: jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''
