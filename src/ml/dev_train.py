@@ -13,7 +13,7 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
 mlflow.set_tracking_uri('http://127.0.0.1:5000')
-mlflow.set_experiment(experiment_id=1)
+mlflow.set_experiment(experiment_name="ex_f1_lake")
 
 DATA_PATH = Path(__file__).resolve().parent.parent.parent / 'data'
 
@@ -116,4 +116,4 @@ with mlflow.start_run():
     mlflow.log_artifact('feature_importances.html')
 
     model.fit(df_analytics[features], df_analytics['RankDriver'])
-    mlflow.sklearn.log_model(model, name='model')
+    mlflow.sklearn.log_model(sk_model=model, artifact_path='model')
