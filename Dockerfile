@@ -1,15 +1,15 @@
-FROM python:3.10-slim-bullseye
+FROM python:3.10-slim-bookworm
 
 # Instala o Java (necessário para o Spark) e compiladores básicos
 RUN apt-get update && apt-get install -y \
-    openjdk-11-jre-headless \
+    openjdk-17-jre-headless \
     build-essential \
     curl \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 # Configura as variáveis de ambiente para o Java funcionar com o Spark
-ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 ENV PATH=$PATH:$JAVA_HOME/bin
 
 # Define a pasta de trabalho dentro do container

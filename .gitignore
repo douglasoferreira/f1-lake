@@ -3,5 +3,6 @@ __pycache__
 .env
 mlflow.db
 mlartifacts/
+mlruns
 *.csv
 *.parquet

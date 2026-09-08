@@ -3,8 +3,8 @@ import os
 import dotenv
 import time
 import datetime
-from collect import CollectResults
-from sender import Sender
+from src.ingestion.collect import CollectResults
+from src.ingestion.sender import Sender
 
 dotenv.load_dotenv()
 WORKSPACE_ID = os.getenv('WORKSPACE_ID')
